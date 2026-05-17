@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import {FaBars, FaTimes} from 'react-icons/fa'
 import {
   FileText,
   Image,
@@ -213,7 +214,7 @@ const handleNavClick = (itemName) => {
       }`}
             > {item.name} </a>
           ))}
-        </div>
+
         
         <a
           href="https://github.com/Durgeshwar-AI/pdfToPng"
@@ -227,6 +228,13 @@ const handleNavClick = (itemName) => {
             Star on GitHub
           </span>
         </a>
+        </div>
+        {/* For Mobile */}
+        <div className ="flex lg:hidden items-center space-x-4 px-2">
+          <button onClick = {()=> setIsMenuOpen(!isMenuOpen)}> 
+            
+          </button>
+        </div>
       </nav>
 
       <main className="relative z-10">
