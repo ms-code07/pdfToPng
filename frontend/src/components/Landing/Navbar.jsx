@@ -1,17 +1,38 @@
-import {useState} from 'react'
+import { useEffect, useState } from 'react'
 import { FileText, Github, Menu, X } from "lucide-react";
 
 const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
-
+    const [stars, setStars] = useState(null);
     const navItems = [
       { name: "Home", link: "#home" },
       { name: "Feature", link: "#feature" },
       { name: "Tools", link: "#tools" },
       { name: "Privacy", link: "#privacy" },
     ];
+    
+useEffect(() => {
+  const fetchGithubStars = async () => {
+    try {
+      const response = await fetch(
+        "https://api.github.com/repos/Durgeshwar-AI/pdfToPng",
+         {
+    cache: "no-store",
+  }
+      );
+
+      const data = await response.json();
+
+      setStars(data.stargazers_count);
+    } catch (error) {
+      console.error("Error fetching GitHub stars:", error);
+    }
+  };
+
+  fetchGithubStars();
+}, []);
 
     const handleMobileNavClick = (itemName) => {
         setActiveSection(itemName.toLowerCase());
@@ -58,7 +79,7 @@ const Navbar = () => {
         >
           <Github className="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors" />
           <span className="text-slate-600 group-hover:text-slate-900 font-medium transition-colors hidden sm:inline">
-            Star on GitHub
+            ⭐ Star on GitHub {stars !== null && `• ${stars}`}
           </span>
         </a>
         </div>
@@ -84,7 +105,9 @@ const Navbar = () => {
               >
                   {item.name}
               </a>
-            ))}
+            ))
+            }
+            
           <a
             href="https://github.com/Durgeshwar-AI/pdfToPng"
             target="_blank"
