@@ -13,6 +13,7 @@ import {
   PenTool,
   Expand,
   Palette,
+  Droplets, 
 } from "lucide-react";
 
 const tools = [
@@ -45,6 +46,25 @@ const tools = [
     iconGradient: "from-emerald-500 to-teal-500",
   },
   {
+    id: "pdf-split",
+    name: "PDF Split",
+    icon: <FileText />,
+    description: "Extract a page range from a PDF into a new document.",
+    path: "/pdf-split",
+    gradient: "from-sky-500/10 to-cyan-500/10",
+    iconGradient: "from-sky-500 to-cyan-500",
+  },
+  {
+    id: "pdf-rotate-flip",
+    name: "PDF Rotate & Flip",
+    icon: <RotateCcw />,
+    description:
+      "Rotate or flip all PDF pages, or only selected pages and ranges (e.g. 1,3,7 or 1-10).",
+    path: "/pdf-rotate-flip",
+    gradient: "from-indigo-500/10 to-violet-500/10",
+    iconGradient: "from-indigo-500 to-violet-500",
+  },
+  {
     id: "pdf-sign",
     name: "PDF Sign",
     icon: <PenTool />,
@@ -52,6 +72,15 @@ const tools = [
     path: "/pdf-sign",
     gradient: "from-indigo-500/10 to-violet-500/10",
     iconGradient: "from-indigo-500 to-violet-500",
+  },
+  {
+    id: "pdf-watermark",
+    name: "PDF Watermark",
+    icon: <FileText />,
+    description: "Add text or image watermarks to PDF files.",
+    path: "/pdf-watermark",
+    gradient: "from-cyan-500/10 to-teal-500/10",
+    iconGradient: "from-cyan-500 to-teal-500",
   },
   {
     id: "image-compress",
@@ -88,6 +117,24 @@ const tools = [
     path: "/image-to-jpg",
     gradient: "from-blue-500/10 to-indigo-500/10",
     iconGradient: "from-blue-500 to-indigo-500",
+  },
+  {
+    id: "image-ocr",
+    name: "Image OCR",
+    icon: <FileText />,
+    description: "Extract editable text from images using OCR.",
+    path: "/image-ocr",
+    gradient: "from-sky-500/10 to-cyan-500/10",
+    iconGradient: "from-sky-500 to-cyan-500",
+  },
+  {
+  id: "image-watermark",
+  name: "Image Watermark",
+  icon: <Droplets />,
+  description: "Add text or image watermarks to protect your photos with custom positioning and opacity.",
+  path: "/image-watermark",
+  gradient: "from-cyan-500/10 to-teal-500/10",
+  iconGradient: "from-cyan-500 to-teal-500",
   },
   {
     id: "image-to-grayscale",
@@ -160,6 +207,15 @@ const tools = [
     path: "/image-to-svg",
     gradient: "from-emerald-500/10 to-blue-500/10",
     iconGradient: "from-emerald-500 to-blue-500",
+  },
+  {
+    id: "docx-to-pdf",
+    name: "DOCX to PDF",
+    icon: <FileText />,
+    description: "Convert .docx files to PDF using the server",
+    path: "/docx-to-pdf",
+    gradient: "from-sky-500/10 to-indigo-500/10",
+    iconGradient: "from-sky-500 to-indigo-500",
   },
 ];
 
