@@ -217,6 +217,15 @@ const tools = [
     gradient: "from-sky-500/10 to-indigo-500/10",
     iconGradient: "from-sky-500 to-indigo-500",
   },
+  {
+    id: "md-to-html",
+    name: "Markdown to HTML",
+    icon: <FileText />,
+    description: "Convert Markdown files to HTML with optional themes (light, dark, blue)",
+    path: "/md-to-html",
+    gradient: "from-slate-500/10 to-slate-700/10",
+    iconGradient: "from-slate-500 to-slate-700",
+  },
 ];
 
 export default tools;
