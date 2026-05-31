@@ -80,12 +80,9 @@ const Footer = () => {
             </span>
             <span className="text-red-500 animate-pulse text-lg">❤️</span>
             <span className="text-sm font-medium text-slate-500">
-              for GSSoC
+              for developers
             </span>
             <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mx-2" />
-            <span className="text-xs font-bold text-slate-400">
-              v1.0.0
-            </span>
           </div>
 
         </div>
